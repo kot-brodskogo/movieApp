@@ -1,17 +1,18 @@
-# Movie App
+# Movie App 🎬
 
 ## Description
 
 The Movie App is a simple command-line application that allows users to manage a collection of movies. Users can add, delete, update, and list movies, as well as perform various operations such as sorting by rating, generating statistics, and creating a movie website.
 
-Movie App uses OMDB API to 
+Movie App uses OMDB API to fetch additional data about movies 🌐.
 
 ## Table of Contents
 
 - [Installation](#installation)
+- [API Usage](#api-usage)
 - [Usage](#usage)
+- [Future Update](#future-update)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
@@ -36,7 +37,7 @@ Replace `data.json` with the path to your JSON storage file. If you're using a C
 
 ## API Usage
 
-Movie App uses the OMDB API to fetch additional data about movies. To use this feature, you'll need to obtain an API key from OMDB and set it up in your environment or directly in the code. Refer to the OMDB API documentation for more information on how to get started.
+Movie App uses the OMDB API to fetch additional data about movies. To use this feature, you'll need to obtain an API key from OMDB and set it up in your environment or directly in the code. Refer to the [OMDB API documentation](https://www.omdbapi.com) for more information on how to get started.
 
 ## Usage
 
@@ -52,6 +53,10 @@ Once the Movie App is running, you can perform the following actions:
 - **Movies sorted by rating:** View the movies sorted by rating.
 - **Create rating histogram:** Generate a histogram of movie ratings.
 - **Generate website:** Generate a website with movie data.
+
+## Future update
+* Adding unit testing 🛠️
+* and more...
 
 ## Contributing
 
