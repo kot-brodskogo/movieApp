@@ -1,5 +1,6 @@
 from istorage import IStorage
 import json
+import os
 
 
 class StorageJson(IStorage):
@@ -13,6 +14,14 @@ class StorageJson(IStorage):
                 file_path (str): The path to the JSON file used for storage.
             """
         self.__file_path = file_path
+        if not os.path.exists(self.__file_path):
+            self._create_empty_json_file()
+            print(f"Storage file '{self.__file_path}' created successfully.")
+
+    def _create_empty_json_file(self):
+        """Create an empty JSON file if it does not exist."""
+        with open(self.__file_path, 'w') as f:
+            f.write('{}')  # Write an empty JSON object to the file
 
     def list_movies(self):
         """

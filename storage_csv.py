@@ -1,5 +1,6 @@
 from istorage import IStorage
 import csv
+import os
 
 
 class StorageCsv(IStorage):
@@ -13,6 +14,15 @@ class StorageCsv(IStorage):
                 file_path (str): The path to the CSV file.
             """
         self.__file_path = file_path
+        if not os.path.exists(self.__file_path):
+            self._create_empty_csv_file()
+            print(f"Storage file '{self.__file_path}' created successfully.")
+
+    def _create_empty_csv_file(self):
+        """Create an empty CSV file with header if it does not exist."""
+        with open(self.__file_path, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['title', 'rating', 'year', 'country', 'poster_url', 'imdb_id', 'notes'])
 
     def list_movies(self):
         """
